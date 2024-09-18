@@ -2,8 +2,12 @@
 include '../database/conexion.php';
 
 $correo = $_REQUEST['correo'];
+$contrasena = $_REQUEST['contrasena'];
 
-// Verifico si el correo ya exite en la BD
+// Encriptar la contraseña
+$contrasena_encriptada = password_hash($contrasena, PASSWORD_DEFAULT);
+
+// Verifico si el correo ya existe en la BD
 $query_verificar = "SELECT * FROM usuarios WHERE correo_usuario = '$correo'";
 $resultado_verificar = pg_query($conexion, $query_verificar);
 
@@ -11,7 +15,7 @@ if (pg_num_rows($resultado_verificar) > 0) {
     echo 'El correo electrónico ya está registrado.';
 } else {
     $query = "INSERT INTO usuarios (nom_usuario, correo_usuario, contrasena_usuario)
-    VALUES ('$_REQUEST[nombre]', '$correo', '$_REQUEST[contrasena]')";
+    VALUES ('$_REQUEST[nombre]', '$correo', '$contrasena_encriptada')";
     
     $consulta = pg_query($conexion, $query);
     
@@ -21,6 +25,3 @@ if (pg_num_rows($resultado_verificar) > 0) {
         echo 'Error al agregar los datos: ' . pg_last_error($conexion);
     }
 }
-
-pg_close();
-?>
