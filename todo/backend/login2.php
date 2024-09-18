@@ -10,8 +10,8 @@ $resultado = pg_query($conexion, $query);
 
 if (pg_num_rows($resultado) > 0) {
     $usuario = pg_fetch_assoc($resultado);
-    // ver si la contraseña es correcta
-    if ($contrasena == $usuario['contrasena_usuario']) {
+    // Verificar si la contraseña es correcta
+    if (password_verify($contrasena, $usuario['contrasena_usuario'])) {
         session_start();
         $_SESSION['usuario'] = $usuario['nom_usuario'];
         header("Location: ../menu.html");

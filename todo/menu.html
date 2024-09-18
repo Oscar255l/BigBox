@@ -3,9 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BIGBOOX - HOME</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style_menu.css">
+    <style>
+        .search-container {
+            margin-top: 20px;
+            text-align: center;
+            z-index: 3;
+            position: relative;
+        }
+        .search-bar {
+            width: 70%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .search-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #c82333;
+        }
+        .info-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            color: white;
+        }
+        .info-text {
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hola a todos</h1>
+
+    <div class="wrapper">
+        <div class="page-header section-dark"
+            style="background-image: url('http://demos.creative-tim.com/paper-kit-2/assets/img/antoine-barres.jpg')">
+            <div class="filter"></div>
+            <div class="content-center">
+                <div class="container">
+                    <div class="title-brand">
+                        <h1 class="presentation-title">BIGBOOX</h1>
+                        <div class="fog-low">
+                            <img src="http://demos.creative-tim.com/paper-kit-2/assets/img/fog-low.png" alt="">
+                        </div>
+                        <div class="fog-low right">
+                            <img src="http://demos.creative-tim.com/paper-kit-2/assets/img/fog-low.png" alt="">
+                        </div>
+                    </div>
+                    <h2 class="presentation-subtitle text-center">"Impulsando negocios locales, encontrando lo que buscas"</h2>
+
+                    <!-- Barra de búsqueda -->
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Buscar..." class="search-bar">
+                        <button class="search-button" onclick="miBuscarEmprendimientos()">Buscar</button>
+                    </div>
+
+                    <!-- Botones de navegación -->
+                    <div class="button-container">
+                        <a href="./BIGBOOXPAGE/BIGBOOX.html" class="btn btn-danger btn-round">Servicios</a>
+                        <a href="#productos" class="btn btn-danger btn-round">Productos</a>
+                        <a href="#inicio" class="btn btn-danger btn-round">Inicio</a>
+                        <a href="#emprendedores" class="btn btn-danger btn-round">Emprendedores</a>
+                        <a href="#eventos" class="btn btn-danger btn-round">Eventos</a>
+                    </div>
+
+                    <!-- Textos informativos -->
+                    <div class="info-container">
+                        <div class="info-text">Más información</div>
+                        <div class="info-text">¿Necesitas ayuda?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        function miBuscarEmprendimientos() {
+            alert("Aún no hay emprendimientos en BIGBOOX.");
+        }
+    </script>
 </body>
 </html>
