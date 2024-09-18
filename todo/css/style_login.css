@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url('http://demos.creative-tim.com/paper-kit-2/assets/img/antoine-barres.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .form-box {
+    position: relative;
+    width: 500px; /* Aumenta el ancho */
+    height: 550px; /* Aumenta la altura */
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  h2 {
+    font-size: 2.5em; /* Aumenta el tamaño del texto */
+    color: #fff;
+    text-align: center;
+  }
+  
+  .inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 350px; /* Aumenta el ancho */
+    border-bottom: 2px solid #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.2em; /* Aumenta el tamaño del texto */
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  
+  input:focus ~ label {
+    top: -5px;
+  }
+  input:valid ~ label {
+    top: -5px;
+  }
+  
+  .inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2em; /* Aumenta el tamaño del texto */
+    padding: 0 35px 0 5px;
+    color: #fff;
+  }
+  
+  .inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.5em; /* Aumenta el tamaño del icono */
+    top: 20px;
+  }
+  
+  .forget {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 15px;
+    font-size: 1em; /* Aumenta el tamaño del texto */
+    color: #fff;
+    width: 350px; /* Aumenta el ancho */
+  }
+  
+  .forget label:nth-child(2) {
+    order: 1;
+  }
+  
+  .forget label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .forget label input[type="checkbox"] {
+    margin-right: 6px;
+  }
+  
+  .forget label a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .forget label a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    width: 350px; /* Aumenta el ancho */
+    height: 50px; /* Aumenta la altura */
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2em; /* Aumenta el tamaño del texto */
+    font-weight: 600;
+  }
+  
+  .register {
+    font-size: 1em; /* Aumenta el tamaño del texto */
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+  }
+  
+  .register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .register p a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
+  
+    

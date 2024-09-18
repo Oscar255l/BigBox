@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_register.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <title>Registro - BIGBOOX</title>
+    <style>
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            background: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: 600;
+            text-align: center;
+            line-height: 40px; /* Centra el texto verticalmente */
+        }
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+    <section>
+      <div class="form-box">
+        <div class="form-value">
+          <a href="../index.html" class="home-button">Home</a>
+          <form action="backend/register2.php" method="POST">
+            <h2>- Registrate en - BIGBOOX </h2>
+            <center>
+                <div class="inputbox">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" name="nombre" required>
+                    <label for="">Nombre</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" name="correo" required>
+                    <label for="">Correo Electrónico</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" name="contrasena" required>
+                    <label for="">Contraseña</label>
+                </div>
+                
+                <button type="submit">Registrarse</button>
+                <div class="register">
+                    <p>¿Ya tienes una cuenta? <a href="./login.html">Iniciar Sesión</a></p>
+                </div>
+            </center>
+        </form>

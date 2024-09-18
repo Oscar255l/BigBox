@@ -1,7 +1,7 @@
 <?php
 
 $host = 'localhost';
-$bd = 'bigbox';
+$bd = 'BIGBOX';
 $user = 'postgres';
 $pass = 'unicesmag';
 $port = '5432';
