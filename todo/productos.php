@@ -1,3 +1,4 @@
+<?php include 'backend/verificar_sesion.php'; ?>
 <DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,9 +30,11 @@
                   <span class="slider round"></span>
                 </label>
               </form>
-              <a herf="#" class="profile"><img src="https://yudiz.com/codepen/nft-store/user-pic1.svg" alt="user-image">Johny B</a>
-              <a href="#" class="notification"><i class="fa fa-bell" aria-hidden="true"></i></a>
-  
+              <a href="#" class="profile"><img src="images/usuario_normal.png" alt="user-image">
+                <?php echo htmlspecialchars($_SESSION['usuario']); ?>
+            </a>
+            
+            <a href="backend/cerrar_sesion.php" class="notification"><i class="fa fa-bell" aria-hidden="true"></i></a>
             </div>
           </div>
           <button class="hamburger-icon">
@@ -48,11 +51,11 @@
           <div class="menu-links">
             <ul>
               <li class="nav-item active">
-                <a href="menu.html" class="d-flex align-items-center nav-link"><i class="fa fa-home" aria-hidden="true"></i>
+                <a href="menu.php" class="d-flex align-items-center nav-link"><i class="fa fa-home" aria-hidden="true"></i>
                   <span>Inicio</span></a>
               </li>
               <li class="nav-item">
-                <a href="productos.html" class="d-flex align-items-center nav-link"><i class="fa fa-briefcase" aria-hidden="true"></i>
+                <a href="productos.php" class="d-flex align-items-center nav-link"><i class="fa fa-briefcase" aria-hidden="true"></i>
                   <span>Productos</span></a>
               </li>
               <li class="nav-item">
