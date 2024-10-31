@@ -30,7 +30,7 @@
                   <span class="slider round"></span>
                 </label>
               </form>
-              <a href="#" class="profile"><img src="https://yudiz.com/codepen/nft-store/user-pic1.svg" alt="user-image">
+              <a href="#" class="profile"><img src="images/usuario_normal.png" alt="user-image">
                 <?php echo htmlspecialchars($_SESSION['usuario']); ?>
             </a>
             
@@ -52,11 +52,11 @@
           <div class="menu-links">
             <ul>
               <li class="nav-item active">
-                <a href="menu.html" class="d-flex align-items-center nav-link"><i class="fa fa-home" aria-hidden="true"></i>
+                <a href="menu.php" class="d-flex align-items-center nav-link"><i class="fa fa-home" aria-hidden="true"></i>
                   <span>Inicio</span></a>
               </li>
               <li class="nav-item">
-                <a href="productos.html" class="d-flex align-items-center nav-link"><i class="fa fa-briefcase" aria-hidden="true"></i>
+                <a href="productos.php" class="d-flex align-items-center nav-link"><i class="fa fa-briefcase" aria-hidden="true"></i>
                   <span>Productos</span></a>
               </li>
               <li class="nav-item">
