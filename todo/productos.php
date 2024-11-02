@@ -95,10 +95,11 @@
                       </div>
                       <span class="fire-user"><img src="https://yudiz.com/codepen/nft-store/user-pic1.svg" alt="user-image"> Rose
                         Ortega</span>
-                      <div class="d-flex fire-links">
-                        <a href="#" class="heart flex-shrink-0"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                        <a href="#" class="theme-btn">ver emprendimiento</a>
-                      </div>
+                        <div class="fire-links">
+    <a href="crear/crear_productos.php" class="theme-btn d-block mb-2">Crear Producto</a> 
+    <a href="ver/ver_productos.php" class="theme-btn d-block">Ver Productos</a>
+</div>
+
                     </div>
                   </div>
                 </div>
