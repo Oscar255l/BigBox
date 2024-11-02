@@ -1,20 +1,20 @@
 <?php
 include '../database/conexion.php';
 
-// Capturar datos del formulario
+// Captura datos del formulario
 $nombreProducto = $_POST['nombreProducto'];
 $descripcionProducto = $_POST['descripcionProducto'];
 $infoContacto = $_POST['infoContacto'];
 
-// Verificar si se cargó una imagen
+// sirve para verificar si se cargó una imagen
 if (isset($_FILES['userImage']) && $_FILES['userImage']['error'] == 0) {
-    // Escapar el contenido binario de la imagen para UTF-8
+
     $imagenProducto = pg_escape_bytea(file_get_contents($_FILES['userImage']['tmp_name']));
 } else {
-    $imagenProducto = null; // O manejar esto según tu lógica
+    $imagenProducto = null;
 }
 
-// Insertar los datos en la base de datos
+// ingresa los datos en la base de datos en la tabla productos
 $query = "INSERT INTO productos (nom_producto, desc_producto, tel_vendedor, imagen_pro) VALUES ($1, $2, $3, $4)";
 $params = array($nombreProducto, $descripcionProducto, $infoContacto, $imagenProducto);
 $result = pg_query_params($conexion, $query, $params);
