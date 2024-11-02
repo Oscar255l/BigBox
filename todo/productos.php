@@ -96,10 +96,9 @@
                       <span class="fire-user"><img src="https://yudiz.com/codepen/nft-store/user-pic1.svg" alt="user-image"> Rose
                         Ortega</span>
                         <div class="fire-links">
-    <a href="crear/crear_productos.php" class="theme-btn d-block mb-2">Crear Producto</a> 
-    <a href="ver/ver_productos.php" class="theme-btn d-block">Ver Productos</a>
-</div>
-
+                        <a href="crear/crear_productos.php" class="theme-btn d-block mb-2">Crear Producto</a> 
+                        <a href="ver/ver_productos.php" class="theme-btn d-block">Ver Productos</a>
+                    </div>
                     </div>
                   </div>
                 </div>

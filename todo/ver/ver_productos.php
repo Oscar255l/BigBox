@@ -42,13 +42,9 @@ if (!$result) {
                         <td><?php echo htmlspecialchars($row['nom_producto']); ?></td>
                         <td><?php echo htmlspecialchars($row['desc_producto']); ?></td>
                         <td><?php echo htmlspecialchars($row['tel_vendedor']); ?></td>
-                        <td>
-    <?php if ($row['imagen_pro']) { ?>
-        <img src="data:image/png;base64,<?php echo base64_encode(pg_unescape_bytea($row['imagen_pro'])); ?>" alt="Producto" style="width: 100px; height: 100px; object-fit: cover;">
-    <?php } else { ?>
-        Sin imagen
-    <?php } ?>
-</td>
+                        <td><?php if ($row['imagen_pro']) { ?> 
+                        <img src="data:image/png;base64,<?php echo base64_encode(pg_unescape_bytea($row['imagen_pro'])); ?>" alt="Producto" style="width: 100px; height: 100px; object-fit: cover;">
+                        <?php } else { ?>Sin imagen<?php } ?> </td>
                     </tr>
                 <?php } ?>
             </tbody>
