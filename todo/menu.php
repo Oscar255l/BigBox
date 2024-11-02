@@ -98,7 +98,7 @@
                         Ortega</span>
                       <div class="d-flex fire-links">
                         <a href="#" class="heart flex-shrink-0"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                        <a href="#" class="theme-btn">ver emprendimiento</a>
+                        <a href="#" class="theme-btn">Ver emprendimiento</a>
                       </div>
                     </div>
                   </div>
