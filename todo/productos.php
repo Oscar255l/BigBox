@@ -59,15 +59,15 @@
                   <span>Productos</span></a>
               </li>
               <li class="nav-item">
-                <a href="servicios.html" class="d-flex align-items-center nav-link"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                <a href="servicios.php" class="d-flex align-items-center nav-link"><i class="fa fa-heart-o" aria-hidden="true"></i>
                   <span>Servicios</span></a>
               </li>
               <li class="nav-item">
-                <a href="emprendedores.html" class="d-flex align-items-center nav-link"><i class="fa fa-square-o" aria-hidden="true"></i>
+                <a href="emprendedores.php" class="d-flex align-items-center nav-link"><i class="fa fa-square-o" aria-hidden="true"></i>
                   <span>Emprendedores</span></a>
               </li>
               <li class="nav-item">
-                <a href="eventos.html" class="d-flex align-items-center nav-link"><i class="fa fa-fire" aria-hidden="true"></i>
+                <a href="eventos.php" class="d-flex align-items-center nav-link"><i class="fa fa-fire" aria-hidden="true"></i>
                   <span>Eventos</span></a>
               </li>
               <li class="nav-item">
