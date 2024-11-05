@@ -4,7 +4,7 @@ include '../../database/conexion.php';
 
 $query = "SELECT id_servicio, nom_servicio, desc_servicio, tel_contacto, imagen_ser, categoria_servicio 
           FROM servicios 
-          WHERE categoria_servicio = 'juegos'";
+          WHERE categoria_servicio = 'Juegos'";
 $result = pg_query($conexion, $query);
 
 if (!$result) {

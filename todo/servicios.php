@@ -142,18 +142,47 @@
             </a>
         </div>
         <div class="col-md-4">
-            <a href="categorias/categorias_servicios/servicios_soporte.php" class="btn-link">
+            <a href="categorias/categorias_servicios/servicios_salud.php" class="btn-link">
                 <div class="trending-content">
                     <img src="https://yudiz.com/codepen/nft-store/card-3.svg" alt="card-images" class="img-fluid">
                     <div class="trending-desc">
-                        <h3 class="user-position">Soporte</h3>
+                        <h3 class="user-position">Salud</h3>
                         <img src="https://yudiz.com/codepen/nft-store/user-pic5.svg" alt="img-fluid" class="user-image">
                     </div>
                 </div>
             </a>
         </div>
+        <div class="col-md-4">
+            <a href="categorias/categorias_servicios/servicios_diseño.php" class="btn-link">
+                <div class="trending-content">
+                    <img src="https://yudiz.com/codepen/nft-store/card-2.svg" alt="card-images" class="img-fluid">
+                    <div class="trending-desc">
+                        <h3 class="user-position">Diseño</h3>
+                        <img src="https://yudiz.com/codepen/nft-store/user-pic4.svg" alt="img-fluid" class="user-image">
+                    </div>
+                </div>
     </div>
+    <div class="col-md-4">
+            <a href="categorias/categorias_servicios/servicios_educacion.php" class="btn-link">
+                <div class="trending-content">
+                    <img src="https://yudiz.com/codepen/nft-store/card-2.svg" alt="card-images" class="img-fluid">
+                    <div class="trending-desc">
+                        <h3 class="user-position">Educacion</h3>
+                        <img src="https://yudiz.com/codepen/nft-store/user-pic4.svg" alt="img-fluid" class="user-image">
+                    </div>
+                </div>
 </div>
+<div class="col-md-4">
+            <a href="categorias/categorias_servicios/servicios_tecnologia.php" class="btn-link">
+                <div class="trending-content">
+                    <img src="https://yudiz.com/codepen/nft-store/card-2.svg" alt="card-images" class="img-fluid">
+                    <div class="trending-desc">
+                        <h3 class="user-position">Tecnologia</h3>
+                        <img src="https://yudiz.com/codepen/nft-store/user-pic4.svg" alt="img-fluid" class="user-image">
+                    </div>
+                </div>
+</div>
+
 
 <style>
 /* Estilo para que los enlaces parezcan botones */

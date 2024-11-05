@@ -4,7 +4,7 @@ include '../../database/conexion.php';
 
 $query = "SELECT id_servicio, nom_servicio, desc_servicio, tel_contacto, imagen_ser, categoria_servicio 
           FROM servicios 
-          WHERE categoria_servicio = 'Marketing'";
+          WHERE categoria_servicio = 'Tecnologia'";
 $result = pg_query($conexion, $query);
 
 if (!$result) {
@@ -20,12 +20,12 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Servicios - Marketing</title>
+    <title>Servicios - Tecnologia</title>
 </head>
 
 <body>
     <div class="container">
-        <h1 class="my-4">Servicios - Categoría: Marketing</h1>
+        <h1 class="my-4">Servicios - Categoría: Tecnologia</h1>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
