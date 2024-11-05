@@ -68,11 +68,12 @@
             <div class="inputBx2">
                 <label for="categoriaServicio">Categoría del Servicio:</label>
                 <select id="categoriaServicio" name="categoriaServicio" required>
-                    <option value="consultoria"></option>
-                    <option value="desarrollo">Desarrollo</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="soporte">Soporte</option>
-                    <option value="juegos">Juegos</option>
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Salud">Salud</option>
+                    <option value="Juegos">Juegos</option>
+                    <option value="Educacion">Educacion</option>
+                    <option value="Diseño">Diseño</option>
         </select>
     </div>
 
