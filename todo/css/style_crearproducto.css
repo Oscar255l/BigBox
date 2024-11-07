@@ -121,6 +121,26 @@ body {
   color: rgba(255, 255, 255, 0.75);
 }
 
+.login .inputBx select {
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+  font-weight: bold;
+}
+
+.login .inputBx label {
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin-bottom: 5px;
+}
+
 .login .links {
   position: relative;
   width: 100%;
@@ -134,3 +154,54 @@ body {
   color: #fff;
   text-decoration: none;
 }
+
+
+.login .inputBx2 {
+    position: relative;
+    width: 100%;
+  }
+  
+  .login .inputBx2 input {
+    position: relative;
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #0c0c0c;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #000000;
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .login .inputBx2 input[type="submit"] {
+    width: 100%;
+    background: #0078ff;
+    background: linear-gradient(45deg, #ff357a, #fff172);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .login .inputBx2 input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .login .inputBx2 select {
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+    font-size: 1.2em;
+    color: #000000;
+    box-shadow: none;
+    outline: none;
+    font-weight: bold;
+  }
+  
+  .login .inputBx2 label {
+    font-weight: bold;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+  }

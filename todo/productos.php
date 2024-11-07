@@ -116,7 +116,7 @@
                     <h2>Emprendimientos</h2>
                   </div>
                   <div class="col-6 text-right">
-                    <a href="#" class="theme-btn"> Mirar Todos </a>
+                    <a href="mis_creaciones/mis_productos.php" class="theme-btn"> Mirar mis productos </a>
                   </div>
                 </div>
               </div>

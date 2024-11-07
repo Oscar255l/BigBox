@@ -2,8 +2,9 @@
 include '../../backend/verificar_sesion.php';
 include '../../database/conexion.php';
 
-$query = "SELECT id_servicio, nom_servicio, desc_servicio, tel_contacto, imagen_ser, categoria_servicio 
-          FROM servicios 
+$query = "SELECT s.id_servicio, s.nom_servicio, s.desc_servicio, s.tel_contacto, s.imagen_ser, s.categoria_servicio, u.id_usuario, u.nom_usuario
+          FROM servicios s
+          JOIN usuarios u ON s.id_usuario = u.id_usuario
           WHERE categoria_servicio = 'Educacion'";
 $result = pg_query($conexion, $query);
 
@@ -35,6 +36,7 @@ if (!$result) {
                     <th scope="col">Categoría</th>
                     <th scope="col">Contacto</th>
                     <th scope="col">Imagen</th>
+                    <th scope="col">Publicado por</th>
                 </tr>
             </thead>
             <tbody>
@@ -52,6 +54,7 @@ if (!$result) {
                                 Sin imagen
                             <?php } ?>
                         </td>
+                        <td><?php echo htmlspecialchars($row['nom_usuario']); ?></td>
                     </tr>
                 <?php } ?>
             </tbody>

@@ -115,6 +115,9 @@
                   <div class="col-6">
                     <h2>Categorias Servicios</h2>
                   </div>
+                  <div class="col-6 text-right">
+                    <a href="mis_creaciones/mis_servicios.php" class="theme-btn"> Mirar mis servicios </a>
+                  </div>
                 </div>
               </div>
               <div class="trending-grid">

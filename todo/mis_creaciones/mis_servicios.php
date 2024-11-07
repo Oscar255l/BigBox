@@ -1,12 +1,14 @@
 <?php
-include '../../backend/verificar_sesion.php';
-include '../../database/conexion.php';
+include '../backend/verificar_sesion.php';
+include '../database/conexion.php';
 
-$query = "SELECT s.id_servicio, s.nom_servicio, s.desc_servicio, s.tel_contacto, s.imagen_ser, s.categoria_servicio, u.id_usuario, u.nom_usuario
-          FROM servicios s
-          JOIN usuarios u ON s.id_usuario = u.id_usuario
-          WHERE categoria_servicio = 'Juegos'";
-$result = pg_query($conexion, $query);
+// Obtine el id del usuario en sesion
+$idUsuario = $_SESSION['id_usuario'];
+
+// Consulta para obtener solo los servicios creados por el usuario autenticado
+$query = "SELECT id_servicio, nom_servicio, desc_servicio, categoria_servicio, tel_contacto, imagen_ser FROM servicios WHERE id_usuario = $1";
+$result = pg_query_params($conexion, $query, array($idUsuario));
+
 if (!$result) {
     echo "Error al obtener los servicios: " . pg_last_error($conexion);
     exit;
@@ -15,27 +17,25 @@ if (!$result) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Servicios - Juegos</title>
+    <title>Mis Servicios</title>
 </head>
-
 <body>
     <div class="container">
-        <h1 class="my-4">Servicios - Categoría: Juegos</h1>
+        <h1 class="my-4">Mis Servicios</h1>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Descripción</th>
-                    <th scope="col">Categoría</th>
+                    <th scope="col">Categoria</th>
                     <th scope="col">Contacto</th>
                     <th scope="col">Imagen</th>
-                    <th scope="col">Publicado por</th>
+                    <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,13 +47,18 @@ if (!$result) {
                         <td><?php echo htmlspecialchars($row['categoria_servicio']); ?></td>
                         <td><?php echo htmlspecialchars($row['tel_contacto']); ?></td>
                         <td>
-                            <?php if ($row['imagen_ser']) { ?>
-                                <img src="data:image/png;base64,<?php echo base64_encode(pg_unescape_bytea($row['imagen_ser'])); ?>" alt="Servicio" style="width: 100px; height: 100px; object-fit: cover;">
+                            <?php if ($row['imagen_ser']) { ?> 
+                                <img src="data:image/png;base64,<?php echo base64_encode(pg_unescape_bytea($row['imagen_ser'])); ?>" alt="Producto" style="width: 100px; height: 100px; object-fit: cover;">
                             <?php } else { ?>
                                 Sin imagen
                             <?php } ?>
                         </td>
-                        <td><?php echo htmlspecialchars($row['nom_usuario']); ?></td>
+                        <td>
+                            <form action="../backend/eliminar/eliminar_servicios.php" method="post" style="display:inline;">
+                                <input type="hidden" name="id_servicio" value="<?php echo $row['id_servicio']; ?>">
+                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>
+                        </td>
                     </tr>
                 <?php } ?>
             </tbody>
@@ -63,11 +68,10 @@ if (!$result) {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
 
 <?php
-
+// Liberar resultado y cerrar conexión
 pg_free_result($result);
 pg_close($conexion);
 ?>
