@@ -66,6 +66,19 @@
         <input type="file" name="userImage" accept="image/*">
     </div>
 
+    
+    <div class="inputBx2">
+                <label for="categoriaProducto">Categoría del Servicio:</label>
+                <select id="categoriaProducto" name="categoriaProducto" required>
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Salud">Salud</option>
+                    <option value="Juegos">Juegos</option>
+                    <option value="Educacion">Educacion</option>
+                    <option value="Diseño">Diseño</option>
+        </select>
+  </div>
+
     <div class="inputBx">
         <input type="submit" value="Añadir Producto">
     </div>

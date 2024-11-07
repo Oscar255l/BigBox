@@ -2,12 +2,12 @@
 include '../backend/verificar_sesion.php';
 include '../database/conexion.php';
 
-// Consulta para obtener los productos
-$query = "SELECT p.id_producto, p.nom_producto, p.desc_producto,p.categoria_producto, p.tel_vendedor, p.imagen_pro, p.id_usuario, u.nom_usuario 
-          FROM productos p
-          JOIN usuarios u ON p.id_usuario = u.id_usuario";
+// obtine el id del usuario en sesion
+$idUsuario = $_SESSION['id_usuario'];
 
-$result = pg_query($conexion, $query);
+// Consulta para obtener solo los productos creados por el usuario autenticado
+$query = "SELECT id_producto, nom_producto, desc_producto, categoria_producto, tel_vendedor, imagen_pro FROM productos WHERE id_usuario = $1";
+$result = pg_query_params($conexion, $query, array($idUsuario));
 
 if (!$result) {
     echo "Error al obtener los productos: " . pg_last_error($conexion);
@@ -21,11 +21,11 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Productos</title>
+    <title>Mis Productos</title>
 </head>
 <body>
     <div class="container">
-        <h1 class="my-4">Productos</h1>
+        <h1 class="my-4">Mis Productos</h1>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -35,7 +35,7 @@ if (!$result) {
                     <th scope="col">Categoria</th>
                     <th scope="col">Contacto</th>
                     <th scope="col">Imagen</th>
-                    <th scope="col">Publicado por</th>
+                    <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -53,8 +53,12 @@ if (!$result) {
                                 Sin imagen
                             <?php } ?>
                         </td>
-                        <td><?php echo htmlspecialchars($row['nom_usuario']); ?></td>
                         <td>
+                            <form action="../backend/eliminar/eliminar_productos.php" method="post" style="display:inline;">
+                                <input type="hidden" name="id_producto" value="<?php echo $row['id_producto']; ?>">
+                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>
+                        </td>
                     </tr>
                 <?php } ?>
             </tbody>
@@ -66,9 +70,8 @@ if (!$result) {
 </body>
 </html>
 
-
 <?php
-// Liberar resultado y cerrar conexión
+// liberar el resultado y cerrar conexión
 pg_free_result($result);
 pg_close($conexion);
 ?>
