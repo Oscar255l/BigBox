@@ -14,8 +14,8 @@ $resultado_verificar = pg_query($conexion, $query_verificar);
 if (pg_num_rows($resultado_verificar) > 0) {
     echo 'El correo electrónico ya está registrado.';
 } else {
-    $query = "INSERT INTO usuarios (nom_usuario, correo_usuario, contrasena_usuario)
-    VALUES ('$_REQUEST[nombre]', '$correo', '$contrasena_encriptada')";
+    $query = "INSERT INTO usuarios (nom_usuario, correo_usuario, contrasena_usuario, cargo)
+    VALUES ('$_REQUEST[nombre]', '$correo', '$contrasena_encriptada', '$_REQUEST[cargo]')";
     
     $consulta = pg_query($conexion, $query);
     

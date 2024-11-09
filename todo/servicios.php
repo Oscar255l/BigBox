@@ -83,7 +83,7 @@
                   <div class="fire-bubble-art d-flex justify-content-between  align-items-center">
                     <img src="https://yudiz.com/codepen/nft-store/image-1.svg" alt="fire-bubble-image" class="img-fluid fire-image fire-width">
                     <div class="fire-content fire-width">
-                      <h3 class="mb-0">Productos</h3>
+                      <h3 class="mb-0">Servicios</h3>
                       <div class="fire-time d-flex justify-content-between">
                         <div class="current-bid">
                           
@@ -118,6 +118,12 @@
                   <div class="col-6 text-right">
                     <a href="mis_creaciones/mis_servicios.php" class="theme-btn"> Mirar mis servicios </a>
                   </div>
+                  </div>
+                  <div class="col-6 text-right">
+    <?php if ($_SESSION['cargo'] === 'Administrador'): ?>
+        <a href="backend/eliminar_admin/eliminartodo_servicio.php" class="theme-btn"> Admin </a>
+    <?php endif; ?>
+</div>
                 </div>
               </div>
               <div class="trending-grid">
