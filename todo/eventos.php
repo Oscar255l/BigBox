@@ -96,8 +96,8 @@
                       <span class="fire-user"><img src="https://yudiz.com/codepen/nft-store/user-pic1.svg" alt="user-image"> Rose
                         Ortega</span>
                         <div class="fire-links">
-                        <a href="crear/crear_servicio.php" class="theme-btn d-block mb-2">Publicar Evento</a> 
-                        <a href="ver/ver_servicios.php" class="theme-btn d-block">Ver Eventos</a>
+                        <a href="crear/crear_evento.php" class="theme-btn d-block mb-2">Publicar Evento</a> 
+                        <a href="ver/ver_eventos.php" class="theme-btn d-block">Ver Eventos</a>
                     </div>
                     </div>
                   </div>
@@ -112,46 +112,18 @@
             <div class="trending">
               <div class="trending-title">
                 <div class="row justify-content-between align-items-center">
-                  <div class="col-6">
-                    <h2>Categorias Servicios</h2>
+                  <div class="col-6 text-right">
+                    <a href="mis_creaciones/mis_eventos.php" class="theme-btn"> Mirar mis eventos </a>
                   </div>
+                  </div>
+                  <hr>
+                  <div class="col-6 text-right">
+    <?php if ($_SESSION['cargo'] === 'Administrador'): ?>
+        <a href="backend/eliminar_admin/eliminartodo_evento.php" class="theme-btn"> Admin </a>
+    <?php endif; ?>
+</div>
                 </div>
               </div>
-              <div class="trending-grid">
-    <div class="row">
-        <div class="col-md-4">
-            <a href="categorias/categorias_servicios/servicios_juegos.php" class="btn-link">
-                <div class="trending-content">
-                    <img src="https://yudiz.com/codepen/nft-store/card-1.svg" alt="card-images" class="img-fluid">
-                    <div class="trending-desc">
-                        <h3 class="user-position">Juegos</h3>
-                        <img src="https://yudiz.com/codepen/nft-store/user-pic3.svg" alt="img-fluid" class="user-image">
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-4">
-            <a href="categorias/categorias_servicios/servicios_marketing.php" class="btn-link">
-                <div class="trending-content">
-                    <img src="https://yudiz.com/codepen/nft-store/card-2.svg" alt="card-images" class="img-fluid">
-                    <div class="trending-desc">
-                        <h3 class="user-position">Marketing</h3>
-                        <img src="https://yudiz.com/codepen/nft-store/user-pic4.svg" alt="img-fluid" class="user-image">
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-4">
-            <a href="categorias/categorias_servicios/servicios_soporte.php" class="btn-link">
-                <div class="trending-content">
-                    <img src="https://yudiz.com/codepen/nft-store/card-3.svg" alt="card-images" class="img-fluid">
-                    <div class="trending-desc">
-                        <h3 class="user-position">Soporte</h3>
-                        <img src="https://yudiz.com/codepen/nft-store/user-pic5.svg" alt="img-fluid" class="user-image">
-                    </div>
-                </div>
-            </a>
-        </div>
     </div>
 </div>
 

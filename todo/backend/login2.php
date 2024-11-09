@@ -14,7 +14,8 @@ if (pg_num_rows($resultado) > 0) {
     if (password_verify($contrasena, $usuario['contrasena_usuario'])) {
         session_start();
         $_SESSION['usuario'] = $usuario['nom_usuario'];
-        $_SESSION['id_usuario'] = $usuario['id_usuario']; // Agrega el ID de usuario a la sesión
+        $_SESSION['id_usuario'] = $usuario['id_usuario']; 
+        $_SESSION['cargo'] = $usuario['cargo']; 
         header("Location: ../menu.php");
     } else {
         echo 'Contraseña incorrecta';

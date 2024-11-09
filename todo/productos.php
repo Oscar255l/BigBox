@@ -118,6 +118,12 @@
                   <div class="col-6 text-right">
                     <a href="mis_creaciones/mis_productos.php" class="theme-btn"> Mirar mis productos </a>
                   </div>
+                  <div class="col-6 text-right">
+    <?php if ($_SESSION['cargo'] === 'Administrador'): ?>
+        <a href="backend/eliminar_admin/eliminartodo_producto.php" class="theme-btn"> Admin </a>
+    <?php endif; ?>
+</div>
+
                 </div>
               </div>
               <div class="trending-grid">
