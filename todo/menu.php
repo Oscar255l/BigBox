@@ -92,10 +92,7 @@
                         <div class="auction">
                           
                         </div>
-                        <span class="middle-line"></span>
                       </div>
-                      <span class="fire-user"><img src="https://yudiz.com/codepen/nft-store/user-pic1.svg" alt="user-image"> Rose
-                        Ortega</span>
                       <div class="d-flex fire-links">
                         <a href="#" class="heart flex-shrink-0"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                         <a href="#" class="theme-btn">Ver emprendimiento</a>
