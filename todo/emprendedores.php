@@ -34,7 +34,7 @@
                 <?php echo htmlspecialchars($_SESSION['usuario']); ?>
             </a>
             
-            <a href="backend/cerrar_sesion.php" class="notification"><i class="fa fa-bell" aria-hidden="true"></i></a>
+            <a href="backend/cerrar_sesion.php" class="notification"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
             </div>
           </div>
           <button class="hamburger-icon">
@@ -81,7 +81,7 @@
               <div class="row">
                 <div class="col-md-8">
                   <div class="fire-bubble-art d-flex justify-content-between  align-items-center">
-                    <img src="https://yudiz.com/codepen/nft-store/image-1.svg" alt="fire-bubble-image" class="img-fluid fire-image fire-width">
+                    <img src="images/images_emprendedores/emprendedores.jpeg" alt="fire-bubble-image" class="img-fluid fire-image fire-width">
                     <div class="fire-content fire-width">
                       <h3 class="mb-0">Emprendedores</h3>
                       <div class="fire-time d-flex justify-content-between">
@@ -91,10 +91,8 @@
                         <div class="auction">
                           
                         </div>
-                        <span class="middle-line"></span>
                       </div>
-                      <span class="fire-user"><img src="https://yudiz.com/codepen/nft-store/user-pic1.svg" alt="user-image"> Rose
-                        Ortega</span>
+                      
                         <div class="fire-links">
                         <a href="crear/crear_historia.php" class="theme-btn d-block mb-2">Ingresar Historia</a> 
                         <a href="ver/ver_historias.php" class="theme-btn d-block">Ver Historias</a>
@@ -103,8 +101,8 @@
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <figure class="paint-image" style="background: url('https://yudiz.com/codepen/nft-store/image-2.svg') no-repeat center center / cover;">
-                    <h1>Emprendimiento de la semana</h1>
+                  <figure class="paint-image" style="background: url('images/images_emprendedores/retos-emprendedores.jpg') no-repeat center center / cover;">
+                    <h1 style="color:black">Motiva a Emprender</h1>
                   </figure>
                 </div>
               </div>

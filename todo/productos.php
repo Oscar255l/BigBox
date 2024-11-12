@@ -34,7 +34,7 @@
                 <?php echo htmlspecialchars($_SESSION['usuario']); ?>
             </a>
             
-            <a href="backend/cerrar_sesion.php" class="notification"><i class="fa fa-bell" aria-hidden="true"></i></a>
+            <a href="backend/cerrar_sesion.php" class="notification"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
             </div>
           </div>
           <button class="hamburger-icon">
@@ -81,7 +81,7 @@
               <div class="row">
                 <div class="col-md-8">
                   <div class="fire-bubble-art d-flex justify-content-between  align-items-center">
-                    <img src="https://yudiz.com/codepen/nft-store/image-1.svg" alt="fire-bubble-image" class="img-fluid fire-image fire-width">
+                    <img src="images/images_productos/productos.jpg" alt="fire-bubble-image" class="img-fluid fire-image fire-width">
                     <div class="fire-content fire-width">
                       <h3 class="mb-0">Productos</h3>
                       <div class="fire-time d-flex justify-content-between">
@@ -91,10 +91,7 @@
                         <div class="auction">
                           
                         </div>
-                        <span class="middle-line"></span>
                       </div>
-                      <span class="fire-user"><img src="https://yudiz.com/codepen/nft-store/user-pic1.svg" alt="user-image"> Rose
-                        Ortega</span>
                         <div class="fire-links">
                         <a href="crear/crear_productos.php" class="theme-btn d-block mb-2">Crear Producto</a> 
                         <a href="ver/ver_productos.php" class="theme-btn d-block">Ver Productos</a>
@@ -103,8 +100,8 @@
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <figure class="paint-image" style="background: url('https://yudiz.com/codepen/nft-store/image-2.svg') no-repeat center center / cover;">
-                    <h1>Emprendimiento de la semana</h1>
+                  <figure class="paint-image" style="background: url('images/images_productos/productos22.jpg') no-repeat center center / cover;">
+                    
                   </figure>
                 </div>
               </div>
@@ -113,7 +110,7 @@
               <div class="trending-title">
                 <div class="row justify-content-between align-items-center">
                   <div class="col-6">
-                    <h2>Emprendimientos</h2>
+                    <h2>Categorias de productos</h2>
                   </div>
                   <div class="col-6 text-right">
                     <a href="mis_creaciones/mis_productos.php" class="theme-btn"> Mirar mis productos </a>
@@ -127,69 +124,84 @@
                 </div>
               </div>
               <div class="trending-grid">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="trending-content">
-                      <img src="https://yudiz.com/codepen/nft-store/card-1.svg" alt="card-images" class="img-fluid">
-                      <div class="trending-desc">
-                        <h4 class="user-title">Wayne Garner</h4>
-                        <h3 class="user-position">Emprendimiento-2</h3>
-                        <div class="bid d-flex justify-content-between align-items-center">
-                          <div>
-                            
-                          </div>
-                          <div>
-                            
-                          </div>
-                        </div>
-                        <img src="https://yudiz.com/codepen/nft-store/user-pic3.svg" alt="img-fluid" class="user-image">
-                      </div>
+    <div class="row">
+        <div class="col-md-4">
+            <a href="categorias/categorias_servicios/servicios_juegos.php" class="btn-link">
+                <div class="trending-content">
+                    <img src="images/images_servicios/juegos_servicio.jpg" alt="card-images" class="img-fluid">
+                    <div class="trending-desc">
+                        <h3 class="user-position">Juegos</h3>
+                        <img src="images/images_servicios/juegos_icon.png" alt="img-fluid" class="user-image">
                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="trending-content">
-                      <img src="https://yudiz.com/codepen/nft-store/card-2.svg" alt="card-images" class="img-fluid">
-                      <div class="trending-desc">
-                        <h4 class="user-title">cody valdez</h4>
-                        <h3 class="user-position">Emprendimiento-3</h3>
-                        <div class="bid d-flex justify-content-between align-items-center">
-                          <div>
-                            
-                          </div>
-                          <div>
-                            
-                          </div>
-                        </div>
-                        <img src="https://yudiz.com/codepen/nft-store/user-pic4.svg" alt="img-fluid" class="user-image">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="trending-content">
-                      <img src="https://yudiz.com/codepen/nft-store/card-3.svg" alt="card-images" class="img-fluid">
-                      <div class="trending-desc">
-                        <h4 class="user-title">Jayden Daniel</h4>
-                        <h3 class="user-position">Emprendimiento-4</h3>
-                        <div class="bid d-flex justify-content-between align-items-center">
-                          <div>
-                            <h5></h5>
-                            <span></span>
-                          </div>
-                          <div>
-                            <h5></h5>
-                            <span></span>
-                          </div>
-                        </div>
-                        <img src="https://yudiz.com/codepen/nft-store/user-pic5.svg" alt="img-fluid" class="user-image">
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
+            </a>
         </div>
-      </div>
+        <div class="col-md-4">
+            <a href="categorias/categorias_servicios/servicios_marketing.php" class="btn-link">
+                <div class="trending-content">
+                    <img src="images/images_servicios/marketing_servicio.jpg" alt="card-images" class="img-fluid">
+                    <div class="trending-desc">
+                        <h3 class="user-position">Marketing</h3>
+                        <img src="images/images_servicios/marketing_icon.png" alt="img-fluid" class="user-image">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="categorias/categorias_servicios/servicios_salud.php" class="btn-link">
+                <div class="trending-content">
+                    <img src="images/images_servicios/salud_servicio.jpg" alt="card-images" class="img-fluid">
+                    <div class="trending-desc">
+                        <h3 class="user-position">Salud</h3>
+                        <img src="images/images_servicios/salud_icon.png" alt="img-fluid" class="user-image">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="categorias/categorias_servicios/servicios_diseño.php" class="btn-link">
+                <div class="trending-content">
+                    <img src="images/images_servicios/diseño_servicio.jpg" alt="card-images" class="img-fluid">
+                    <div class="trending-desc">
+                        <h3 class="user-position">Diseño</h3>
+                        <img src="images/images_servicios/diseño_icon.png" alt="img-fluid" class="user-image">
+                    </div>
+                </div>
     </div>
+    <div class="col-md-4">
+            <a href="categorias/categorias_servicios/servicios_educacion.php" class="btn-link">
+                <div class="trending-content">
+                    <img src="images/images_servicios/educacion_servicio.jpg" alt="card-images" class="img-fluid">
+                    <div class="trending-desc">
+                        <h3 class="user-position">Educacion</h3>
+                        <img src="images/images_servicios/educacion_icon.png" alt="img-fluid" class="user-image">
+                    </div>
+                </div>
+</div>
+<div class="col-md-4">
+            <a href="categorias/categorias_servicios/servicios_tecnologia.php" class="btn-link">
+                <div class="trending-content">
+                    <img src="images/images_servicios/tecnologia_servicio.jpg" alt="card-images" class="img-fluid">
+                    <div class="trending-desc">
+                        <h3 class="user-position">Tecnologia</h3>
+                        <img src="images/images_servicios/tecnologia_icon.png" alt="img-fluid" class="user-image">
+                    </div>
+                </div>
+</div>
+
+
+<style>
+/* Estilo para que los enlaces parezcan botones */
+.btn-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s;
+}
+
+.btn-link:hover .trending-content {
+    transform: scale(1.05);
+}
+</style>
   </body>
 </html>
