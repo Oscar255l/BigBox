@@ -72,7 +72,7 @@
                   <span>Eventos</span></a>
               </li>
               <li class="nav-item">
-                <a href="#" class="d-flex align-items-center nav-link"><i class="fa fa-cog" aria-hidden="true"></i>
+                <a href="configuraciones/ajustes.php" class="d-flex align-items-center nav-link"><i class="fa fa-cog" aria-hidden="true"></i>
                   <span>Ajustes</span></a>
               </li>
             </ul>
