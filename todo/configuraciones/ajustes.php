@@ -11,9 +11,9 @@
     <main class="main flow">
         <h1 class="main__heading">Configuraciones</h1>
         
-              <a href="#basic" class="card__cta cta">Cambiar Contraseña</a>
+              <a href="cambiar_contra.php" class="card__cta cta">Cambiar Contraseña</a>
             </div>
-              <a href="#pro" class="card__cta cta">Cambiar Nombre de Usuario</a>
+              <a href="cambiar_nomusuario.php" class="card__cta cta">Cambiar Nombre de Usuario</a>
             </div>
               <a href="../backend/cerrar_sesion.php" class="card__cta cta">Cerrar sesion</a>
             </div>
