@@ -34,7 +34,7 @@
                 <?php echo htmlspecialchars($_SESSION['usuario']); ?>
             </a>
             
-            <a href="backend/cerrar_sesion.php" class="notification"><i class="fa fa-bell" aria-hidden="true"></i></a>
+            <a href="backend/cerrar_sesion.php" class="notification"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
   
             </div>
           </div>

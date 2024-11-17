@@ -126,7 +126,7 @@
               <div class="trending-grid">
     <div class="row">
         <div class="col-md-4">
-            <a href="categorias/categorias_servicios/servicios_juegos.php" class="btn-link">
+            <a href="categorias/categorias_productos/productos_juegos.php" class="btn-link">
                 <div class="trending-content">
                     <img src="images/images_servicios/juegos_servicio.jpg" alt="card-images" class="img-fluid">
                     <div class="trending-desc">
@@ -137,7 +137,7 @@
             </a>
         </div>
         <div class="col-md-4">
-            <a href="categorias/categorias_servicios/servicios_marketing.php" class="btn-link">
+            <a href="categorias/categorias_productos/productos_marketing.php" class="btn-link">
                 <div class="trending-content">
                     <img src="images/images_servicios/marketing_servicio.jpg" alt="card-images" class="img-fluid">
                     <div class="trending-desc">
@@ -148,7 +148,7 @@
             </a>
         </div>
         <div class="col-md-4">
-            <a href="categorias/categorias_servicios/servicios_salud.php" class="btn-link">
+            <a href="categorias/categorias_productos/productos_salud.php" class="btn-link">
                 <div class="trending-content">
                     <img src="images/images_servicios/salud_servicio.jpg" alt="card-images" class="img-fluid">
                     <div class="trending-desc">
@@ -159,7 +159,7 @@
             </a>
         </div>
         <div class="col-md-4">
-            <a href="categorias/categorias_servicios/servicios_diseño.php" class="btn-link">
+            <a href="categorias/categorias_productos/productos_diseño.php" class="btn-link">
                 <div class="trending-content">
                     <img src="images/images_servicios/diseño_servicio.jpg" alt="card-images" class="img-fluid">
                     <div class="trending-desc">
@@ -169,7 +169,7 @@
                 </div>
     </div>
     <div class="col-md-4">
-            <a href="categorias/categorias_servicios/servicios_educacion.php" class="btn-link">
+            <a href="categorias/categorias_productos/productos_educacion.php" class="btn-link">
                 <div class="trending-content">
                     <img src="images/images_servicios/educacion_servicio.jpg" alt="card-images" class="img-fluid">
                     <div class="trending-desc">
@@ -179,7 +179,7 @@
                 </div>
 </div>
 <div class="col-md-4">
-            <a href="categorias/categorias_servicios/servicios_tecnologia.php" class="btn-link">
+            <a href="categorias/categorias_productos/productos_tecnologia.php" class="btn-link">
                 <div class="trending-content">
                     <img src="images/images_servicios/tecnologia_servicio.jpg" alt="card-images" class="img-fluid">
                     <div class="trending-desc">
