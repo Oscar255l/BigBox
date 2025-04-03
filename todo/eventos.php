@@ -71,6 +71,10 @@
                   <span>Eventos</span></a>
               </li>
               <li class="nav-item">
+                <a href="" class="d-flex align-items-center nav-link"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                  <span>Tips</span></a>
+              </li>
+              <li class="nav-item">
                 <a href="configuraciones/ajustes.php" class="d-flex align-items-center nav-link"><i class="fa fa-cog" aria-hidden="true"></i>
                   <span>Ajustes</span></a>
               </li>
@@ -123,6 +127,56 @@
               </div>
     </div>
 </div>
+
+<script>
+    (function(){
+        if(!window.chatbase || window.chatbase("getState") !== "initialized") {
+            window.chatbase = (...arguments) => {
+                if(!window.chatbase.q) {
+                    window.chatbase.q = [];
+                }
+                window.chatbase.q.push(arguments);
+            };
+            window.chatbase = new Proxy(window.chatbase, {
+                get(target, prop) {
+                    if(prop === "q") {
+                        return target.q;
+                    }
+                    return (...args) => target(prop, ...args);
+                }
+            });
+        }
+        const onLoad = function() {
+            const script = document.createElement("script");
+            script.src = "https://www.chatbase.co/embed.min.js";
+            script.id = "SEjb-h_ydCA8lsKh2C_pE";
+            script.domain = "www.chatbase.co";
+            document.body.appendChild(script);
+        };
+        if(document.readyState === "complete") {
+            onLoad();
+        } else {
+            window.addEventListener("load", onLoad);
+        }
+    })();
+</script>
+
+<!-- Configuración del chatbot -->
+<script>
+    // Configura el chatbot con tu ID de bot
+    window.chatbase("config", {
+        botId: "r56bh61tzqv3qyp7zsdctl28m4w3gc48", 
+        domain: "www.chatbase.co"
+    });
+
+    // Event listeners para el chatbot
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbot = document.getElementById('chatbot');
+
+    chatbotToggle.addEventListener('click', () => {
+        chatbot.classList.toggle('chatbot-active');
+    });
+</script>
 
 <style>
 /* Estilo para que los enlaces parezcan botones */
