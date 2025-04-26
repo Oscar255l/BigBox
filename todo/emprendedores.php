@@ -72,7 +72,7 @@
                   <span>Eventos</span></a>
               </li>
               <li class="nav-item">
-                <a href="" class="d-flex align-items-center nav-link"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                <a href="tips.php" class="d-flex align-items-center nav-link"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>
                   <span>Tips</span></a>
               </li>
               <li class="nav-item">
