@@ -11,13 +11,9 @@
     <main class="main flow">
         <h1 class="main__heading">Configuraciones</h1>
         
-              <a href="cambiar_contra.php" class="card__cta cta">Cambiar Contraseña</a>
+              <a href="registrar_facial.php" class="card__cta cta">Añadir Escaner Facial</a>
             </div>
-              <a href="cambiar_nomusuario.php" class="card__cta cta">Cambiar Nombre de Usuario</a>
-            </div>
-              <a href="../backend/cerrar_sesion.php" class="card__cta cta">Cerrar sesion</a>
-            </div>
-            <a href="escaner_facial.php" class="card__cta cta">Añadir Escáner Facial</a>
+              <a href="eliminar_facial.php" class="card__cta cta">Eliminar Escaner Facial</a>
 
           </div>
           

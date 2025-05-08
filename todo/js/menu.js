@@ -15,3 +15,13 @@ $(document).ready(function () {
       document.body.classList.toggle("dark-theme");
     });
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const menu = document.querySelector('.menu-links');
+    const toggleBtn = document.querySelector('.hamburger-icon');
+  
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  });
+  
