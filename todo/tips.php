@@ -21,7 +21,7 @@
 <html lang="en"> 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style_tips.css">
@@ -103,11 +103,11 @@
         <div class="nft-store-content">
             <div class="nft-up-content">
                 <div class="row">
-                    <div class="col-md-10">
-                        <div class="fire-bubble-art d-flex justify-content-between  align-items-center" style="width: 835px">
+                    <div class="col-sm-12">
+                    <div class="fire-bubble-art d-flex justify-content-center align-items-center"  style="width: max-width: 100%; auto;">
                             <img src="images/images_tips/emprendedores.png" alt="fire-bubble-image" class="img-fluid fire-image fire-width">
                             <div class="fire-content fire-width">
-                            <h3 class="mb-0" style="margin-top: -10px; margin-left: 30px; font-size: 36px; font-weight: bold; text-align: center;">
+                            <h3 class="mb-0 mx-auto" style="margin-top: -20px; margin-left: 30px; font-size: 30px; font-weight: bold; text-align: center;">
                               Tips y Consejos para Emprendedores
                             </h3>
                                   <div class="fire-time d-flex justify-content-between">
@@ -125,11 +125,11 @@
 
             <div class="nft-up-content" style="margin-top: 30px;">
                 <div class="row">
-                  <div class="col-md-10">
-                      <div class="fire-bubble-art d-flex justify-content-between align-items-center" style="width: 835px">
+                  <div class="col-sm-12">
+                      <div class="fire-bubble-art d-flex justify-content-between align-items-center" style="width: max-width: 100%; auto;">
                           <img src="images/images_tips/usuarios.png" alt="fire-bubble-image" class="img-fluid fire-image fire-width">
                             <div class="fire-content fire-width">
-                            <h3 class="mb-0" style="margin-top: -20px; margin-left: 0px; font-size: 36px; font-weight: bold; text-align: center;">
+                            <h3 class="mb-0" style="margin-top: -20px; margin-left: 0px; font-size: 30px; font-weight: bold; text-align: center;">
                               Tips y Consejos para Usuarios
                             </h3>
                               <div class="fire-time d-flex justify-content-between">
@@ -219,17 +219,20 @@
 </script>
 
 
-    <div class="trending">
-        <div class="trending-title">
-            <hr>
-            <div class="col-6 text-right">
-                <a href="documents/archivo.pdf" class="theme-btn" download>Descargar PDF</a>
-            </div>
+<div class="trending text-center">
+<h1 class="titulo-video mt-4">Documentos Interesantes</h1>
+    <div class="trending-title text-center">
+        <hr>
+        <div class="trending-title text-center mt-7 mb-4">
+            <a href="documents/archivo.pdf" class="theme-btn px-4 py-2" download>Descargar PDF</a>
         </div>
     </div>
+</div>
+
+
 
     <div class="video-container">
-        <h1 class="titulo-video">Videos Interesantes</h1>
+        <h1 class="titulo-video mt-7" style="margin-top: 200px">Videos Interesantes</h1>
         <video class="reproductor-video" width="640" height="360" controls>
             <source src="videos/principios_negocios.mp4" type="video/mp4">
             Tu navegador no soporta el elemento de video.
@@ -237,8 +240,11 @@
     </div>
 
     <?php if ($_SESSION['cargo'] === 'Administrador'): ?>
-        <a href="backend/eliminar_admin/eliminartodo_historia.php" class="theme-btn"> Admin </a>
-    <?php endif; ?>
+    <div class="d-flex justify-content-center mt-4 mb-4">
+        <a href="backend/eliminar_admin/eliminartodo_historia.php" class="theme-btn px-4 py-2">Admin</a>
+    </div>
+<?php endif; ?>
+
 </div>
                 </div>
               </div>
@@ -259,11 +265,7 @@
 
     .btn-link:hover .trending-content {
         transform: scale(1.05);
-    }
-
-
-    
+    }    
 </style>
-
   </body>
 </html>
