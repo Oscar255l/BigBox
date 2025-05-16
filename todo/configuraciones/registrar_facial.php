@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <title>Registrar Escáner Facial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  
+
   <style>
     video {
       border: 2px solid #000;
@@ -35,11 +37,12 @@
     const video = document.getElementById("video");
 
     // Cargar modelos de face-api.js
-    Promise.all([
-      faceapi.nets.tinyFaceDetector.loadFromUri('../models'),
-      faceapi.nets.faceLandmark68Net.loadFromUri('../models'),
-      faceapi.nets.faceRecognitionNet.loadFromUri('../models')
-    ]).then(iniciarVideo);
+Promise.all([
+  faceapi.nets.tinyFaceDetector.loadFromUri('../models'),
+  faceapi.nets.faceLandmark68TinyNet.loadFromUri('../models'),
+  faceapi.nets.faceRecognitionNet.loadFromUri('../models')
+]).then(iniciarVideo);
+
 
     function iniciarVideo() {
       navigator.mediaDevices.getUserMedia({ video: {} })
@@ -48,8 +51,7 @@
     }
 
     async function capturarRostro() {
-      const deteccion = await faceapi.detectSingleFace(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceDescriptor();
-
+      const deteccion = await faceapi.detectSingleFace(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks(true).withFaceDescriptor();
       if (!deteccion) {
         status.textContent = "No se detectó un rostro. Intenta nuevamente.";
         return;
@@ -78,3 +80,6 @@
   </script>
 </body>
 </html>
+
+
+

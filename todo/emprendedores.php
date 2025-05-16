@@ -22,10 +22,6 @@
               Bigboox</a>
             <div class="header-content d-flex align-items-center justify-content-end">
               <form class="d-flex justify-content-end align-items-center">
-                <div class="search-icon">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                </div>
                 <label class="switch flex-shrink-0 mb-0">
                   <input id="checkbox" type="checkbox">
                   <span class="slider round"></span>
