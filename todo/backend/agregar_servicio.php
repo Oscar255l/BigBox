@@ -19,9 +19,11 @@ $params = array($nombreServicio, $infoContacto, $imagenServicio, $descripcionSer
 $result = pg_query_params($conexion, $query, $params);
 
 if ($result) {
-    echo 'Servicio agregado correctamente';
+    $_SESSION['mensaje'] = "✅ Servicio agregado correctamente.";
+    $_SESSION['tipo_mensaje'] = "exito";
 } else {
-    echo 'Error al agregar el servicio: ' . pg_last_error($conexion);
+    $_SESSION['mensaje'] = "❌ Error al agregar el Servicio: " . pg_last_error($conexion);
+    $_SESSION['tipo_mensaje'] = "error";
 }
 
 pg_close($conexion);

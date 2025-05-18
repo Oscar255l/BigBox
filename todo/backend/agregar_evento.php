@@ -18,9 +18,11 @@ $params = array($nombreEvento, $lugarEvento, $imagenEvento, $descripcionEvento, 
 $result = pg_query_params($conexion, $query, $params);
 
 if ($result) {
-    echo 'Evento agregado correctamente';
+    $_SESSION['mensaje'] = "✅ Evento agregado correctamente.";
+    $_SESSION['tipo_mensaje'] = "exito";
 } else {
-    echo 'Error al agregar el Evento: ' . pg_last_error($conexion);
+    $_SESSION['mensaje'] = "❌ Error al agregar el Evento: " . pg_last_error($conexion);
+    $_SESSION['tipo_mensaje'] = "error";
 }
 
 pg_close($conexion);

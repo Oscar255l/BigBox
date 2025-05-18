@@ -22,9 +22,11 @@ $params = array($nombreProducto, $descripcionProducto, $infoContacto, $imagenPro
 $result = pg_query_params($conexion, $query, $params);
 
 if ($result) {
-    echo 'Producto agregado correctamente';
+    $_SESSION['mensaje'] = "✅ Producto agregado correctamente.";
+    $_SESSION['tipo_mensaje'] = "exito";
 } else {
-    echo 'Error al agregar el producto: ' . pg_last_error($conexion);
+    $_SESSION['mensaje'] = "❌ Error al agregar el producto: " . pg_last_error($conexion);
+    $_SESSION['tipo_mensaje'] = "error";
 }
 
 // Cerrar conexión

@@ -17,9 +17,11 @@ $params = array($nombreHistoria, $imagenHistoria, $descripcionHistoria, $idUsuar
 $result = pg_query_params($conexion, $query, $params);
 
 if ($result) {
-    echo 'Historia agregada correctamente';
+    $_SESSION['mensaje'] = "✅ Historia agregada correctamente.";
+    $_SESSION['tipo_mensaje'] = "exito";
 } else {
-    echo 'Error al agregar historia: ' . pg_last_error($conexion);
+    $_SESSION['mensaje'] = "❌ Error al agregar el Historia: " . pg_last_error($conexion);
+    $_SESSION['tipo_mensaje'] = "error";
 }
 
 pg_close($conexion);

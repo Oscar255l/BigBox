@@ -47,6 +47,17 @@
     <i style="--clr:#ffae44;"></i>
 
     <div class="login">
+          <?php
+if (isset($_SESSION['mensaje'])) {
+    $fondo = $_SESSION['tipo_mensaje'] === 'exito' ? '#d4edda' : '#f8d7da';
+    $color = $_SESSION['tipo_mensaje'] === 'exito' ? '#155724' : '#721c24';
+    echo "<div style='background-color: $fondo; color: $color; padding: 10px; border-radius: 5px; margin: 10px 0; text-align: center; font-weight: bold;'>
+            {$_SESSION['mensaje']}
+          </div>";
+    unset($_SESSION['mensaje']);
+    unset($_SESSION['tipo_mensaje']);
+}
+?>
       <h2>Historia</h2>
       <form action="../backend/agregar_historia.php" method="post" enctype="multipart/form-data">
             <div class="inputBx">
